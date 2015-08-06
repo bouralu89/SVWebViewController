@@ -59,8 +59,8 @@
 
 - (void)loadView {
     self.view = self.webView;
-    self.view.opaque = false
-    self.view.backgroundColor = UIColor.whiteColor()
+    self.view.opaque = NO;
+    self.view.backgroundColor = [UIColor whiteColor];
     [self loadRequest:self.request];
 }
 
