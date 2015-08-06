@@ -59,6 +59,8 @@
 
 - (void)loadView {
     self.view = self.webView;
+    self.view.opaque = false
+    self.view.backgroundColor = UIColor.whiteColor()
     [self loadRequest:self.request];
 }
 
@@ -217,7 +219,7 @@
                           nil];
 
         self.navigationController.toolbar.barStyle = self.navigationController.navigationBar.barStyle;
-        self.navigationController.toolbar.tintColor = self.navigationController.navigationBar.tintColor;
+        //self.navigationController.toolbar.tintColor = self.navigationController.navigationBar.tintColor;
         self.toolbarItems = items;
     }
 }
