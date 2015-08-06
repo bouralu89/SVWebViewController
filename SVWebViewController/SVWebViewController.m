@@ -122,8 +122,11 @@
 }
 
 - (UIBarButtonItem *)backBarButtonItem {
+
+    NSString *filePath = [[NSBundle bundleForClass:self] pathForResource:@"SVWebViewControllerBack" ofType:@"png"];
+
     if (!_backBarButtonItem) {
-        _backBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"SVWebViewController.bundle/SVWebViewControllerBack"]
+        _backBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageWithContentsOfFile:filePath]
                                                               style:UIBarButtonItemStylePlain
                                                              target:self
                                                              action:@selector(goBackTapped:)];
@@ -133,8 +136,11 @@
 }
 
 - (UIBarButtonItem *)forwardBarButtonItem {
+
+    NSString *filePath = [[NSBundle bundleForClass:self] pathForResource:@"SVWebViewControllerForward" ofType:@"png"];
+
     if (!_forwardBarButtonItem) {
-        _forwardBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"SVWebViewController.bundle/SVWebViewControllerNext"]
+        _forwardBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageWithContentsOfFile:filePath]
                                                                  style:UIBarButtonItemStylePlain
                                                                 target:self
                                                                 action:@selector(goForwardTapped:)];
