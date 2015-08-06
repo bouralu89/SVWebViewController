@@ -123,7 +123,7 @@
 
 - (UIBarButtonItem *)backBarButtonItem {
 
-    NSString *filePath = [[NSBundle bundleForClass:self] pathForResource:@"SVWebViewControllerBack" ofType:@"png"];
+    NSString *filePath = [[NSBundle bundleForClass:SVWebViewController.class] pathForResource:@"SVWebViewController.bundle/SVWebViewControllerBack" ofType:@"png"];
 
     if (!_backBarButtonItem) {
         _backBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageWithContentsOfFile:filePath]
@@ -137,7 +137,7 @@
 
 - (UIBarButtonItem *)forwardBarButtonItem {
 
-    NSString *filePath = [[NSBundle bundleForClass:self] pathForResource:@"SVWebViewControllerForward" ofType:@"png"];
+    NSString *filePath = [[NSBundle bundleForClass:SVWebViewController.class] pathForResource:@"SVWebViewController.bundle/SVWebViewControllerNext" ofType:@"png"];
 
     if (!_forwardBarButtonItem) {
         _forwardBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageWithContentsOfFile:filePath]
